@@ -17,3 +17,7 @@ This repository contains lambda code to send email notification to recipient ema
 
 **Important Information:**
 - Scheduler, AWS Lambda and AWS region should be configured in the same AWS region
+
+**Diagram:**
+
+<img src="./Vaccination Availability Notification Service.png" width="900"/>
