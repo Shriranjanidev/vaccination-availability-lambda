@@ -31,11 +31,11 @@ def get_availablity_details(url, start_date, end_date):
                 for session in center["sessions"]:
                     if (session["min_age_limit"] == 18 and session["available_capacity"] > 0):
                         availability = {
-                            "centerName": "",
-                            "availableDate": ""
-                        }
-                        availability["centerName"] = center["name"]
-                        availability["availableDate"] = session["date"]                
+                            "centerName": center["name"],
+                            "availableDate": session["date"],
+                            "availableCapacity": session["available_capacity"],
+                            "slots": session["slots"]
+                        }              
                         availability_list.append(availability)
         start_date = start_date + timedelta(days=7)
     return availability_list
