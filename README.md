@@ -20,4 +20,4 @@ This repository contains lambda code to send email notification to recipient ema
 
 **Diagram:**
 
-<img src="./Vaccination Availability Notification Service.png" width="900"/>
+<img src="./vaccination_availability_notification_arch.svg" width="900"/>
