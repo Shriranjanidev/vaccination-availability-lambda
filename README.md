@@ -4,7 +4,7 @@ This repository contains lambda code to send email notification to recipient ema
 
 **Pre-requisite Steps**
 - Create a lambda function with Python runtime.
-- Configure scheduler event using AWS Event Bridge for every 30 minutes with the lambda as target
+- Configure scheduler event using AWS Event Bridge for every 1 minute(This can be configured as per your convenience) with the lambda as target
 - Configure AWS SES by verifying the sender email
 
 **Lambda Configuration Steps:**
