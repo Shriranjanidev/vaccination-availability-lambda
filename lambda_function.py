@@ -4,6 +4,7 @@ import requests
 import boto3
 from botocore.exceptions import ClientError
 from datetime import datetime, timedelta
+from dateutil.tz import gettz
 
 def lambda_handler(event, context):
     url = os.environ["api_url"]
@@ -21,7 +22,7 @@ def lambda_handler(event, context):
 
 def get_availablity_details(url):
     details = ""
-    params = {'district_id': 571, 'date': datetime.today().strftime('%d-%m-%Y')}
+    params = {'district_id': 571, 'date': datetime.now(gettz("Asia/Kolkata")).strftime('%d-%m-%Y')}
     headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     response = requests.get(url = url, headers = headers, params = params)
     if(response.status_code == 200):
